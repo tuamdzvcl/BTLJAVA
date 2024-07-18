@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.1457286432160804" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="477.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Label layoutX="200" layoutY="14.0" text="QUẢN LÝ ĐỒ ĐA DỤNG">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="708.0">
+         <children>
+            <TableView fx:id="table" layoutX="14.0" layoutY="41.0" prefHeight="200.0" prefWidth="760.0">
+              <columns>
+                <TableColumn fx:id="col_code" prefWidth="107.0" text="Mã sản phẩm " />
+                <TableColumn fx:id="col_name" prefWidth="159.0" text="Tên sản phẩm " />
+                  <TableColumn fx:id="col_quan" prefWidth="82.0" text="Số lượng" />
+                  <TableColumn fx:id="col_price" prefWidth="127.0" text="Giá bán" />
+                  <TableColumn fx:id="col_describe" prefWidth="127.0" text="Mô tả " />
+                  <TableColumn fx:id="col_image" prefWidth="157.0" text="Ảnh " />
+              </columns>
+            </TableView>
+            <TextField fx:id="txt_search" layoutX="14.0" layoutY="11.0" onKeyReleased="#Search" prefHeight="25.0" prefWidth="760.0" promptText="Nhập mã" />
+            <Label layoutX="14.0" layoutY="263.0" text="Mã sản phẩm">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="299.0" text="Tên sản phẩm">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="334.0" text="Số lượng">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_code" layoutX="110.0" layoutY="259.0" prefHeight="25.0" prefWidth="164.0" />
+            <TextField fx:id="txt_name" layoutX="110.0" layoutY="295.0" prefHeight="25.0" prefWidth="164.0" />
+            <TextField fx:id="txt_quantity" layoutX="110.0" layoutY="334.0" prefHeight="25.0" prefWidth="164.0" />
+            <Label layoutX="293.0" layoutY="263.0" text="Mô tả">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_describe" layoutX="357.0" layoutY="259.0" prefHeight="25.0" prefWidth="164.0" />
+            <Label layoutX="293.0" layoutY="298.0" text="Giá bán">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_price" layoutX="358.0" layoutY="294.0" prefHeight="25.0" prefWidth="164.0" />
+            <FontAwesomeIconView glyphName="IMAGE" layoutX="359.0" layoutY="352.0" onMouseClicked="#OpenImage" size="25" />
+            <Label layoutX="295.0" layoutY="337.0" text="Ảnh">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="661.0" layoutY="260.0" mnemonicParsing="false" onAction="#Btn_Add" prefHeight="30.0" prefWidth="112.0"  text="THÊM SẢN PHẨM" />
+            <Button layoutX="661.0" layoutY="300.0" mnemonicParsing="false" onAction="#Btn_Update" prefHeight="30.0" prefWidth="112.0"  text="Sửa SẢN PHẨM" />
+            <Button layoutX="661.0" layoutY="341.0" mnemonicParsing="false" onAction="#Btn_Delete" prefHeight="30.0" prefWidth="112.0"  text="Xóa SẢN PHẨM" />
+            <ImageView fx:id="fastImage" fitHeight="113.0" fitWidth="112.0" layoutX="532.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
